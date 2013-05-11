@@ -142,6 +142,8 @@ package away3d.animators
 		{
 			if (_name == name)
 				return;
+
+			stop();
 			
 			_name = name;
 			
@@ -171,6 +173,8 @@ package away3d.animators
 			//apply a time offset if specified
 			if (!isNaN(offset))
 				reset(name, offset);
+			else
+				reset(name, 0);
 		}
 		
 		/**
